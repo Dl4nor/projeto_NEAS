@@ -35,3 +35,75 @@ nav p {
     text-decoration: none;
     font-weight: bold;
 }
+
+/*
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+
+}
+
+codigo dos botões na parte do CSS
+
+<div class="dropdown">
+  <button class="dropbtn">LOJA</button>
+  <div class="dropdown-content">
+    <a href="#">Opção A</a>
+    <a href="#">Opção B</a>
+    <a href="#">Opção C</a>
+    <a href="#">Opção D</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">COMUNIDADE</button>
+  <div class="dropdown-content">
+    <a href="#">Opção A</a>
+    <a href="#">Opção B</a>
+    <a href="#">Opção C</a>
+    <a href="#">Opção D</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">SOBRE</button>
+  <div class="dropdown-content">
+    <a href="#">Opção A</a>
+    <a href="#">Opção B</a>
+    <a href="#">Opção C</a>
+    <a href="#">Opção D</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">SUPORTE</button>
+  <div class="dropdown-content">
+    <a href="#">Opção A</a>
+    <a href="#">Opção B</a>
+    <a href="#">Opção C</a>
+    <a href="#">Opção D</a>
+  </div>
+</div>
+
+*/
