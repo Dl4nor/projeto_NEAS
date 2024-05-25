@@ -22,3 +22,16 @@ header{
     padding: 10px;
     background-color: #2a2e36;
 }
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+nav p {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
