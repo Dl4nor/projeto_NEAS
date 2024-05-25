@@ -1,0 +1,24 @@
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+p{
+    color: white
+}
+body{
+    background: rgb(0,32,36);
+    background: linear-gradient(180deg, rgba(0,32,36,1) 6%, rgba(9,121,27,1) 68%, rgba(0,255,192,1) 100%);
+}
+
+main{
+    background-color: #172134eb;
+}
+
+header{
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+    background-color: #2a2e36;
+}
