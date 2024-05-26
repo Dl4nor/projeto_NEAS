@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense para aprender sobre possíveis atributos.
+    // Passe o mouse para ver descrições dos atributos existentes.
+    // Para mais informações, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Abrir arquivo HTML atual no Chrome",
+            "file": "${file}",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
