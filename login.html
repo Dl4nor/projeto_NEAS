@@ -4,29 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+    <script src="login.js"></script>
     <title>Tela de Login</title>
-    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Digite seu email">
+    <header>
+        <section>
+            <a href="./NEAS.html">
+                <img src="./src/images/logo_gradient_neas.png" width="10%">
+            </a>
+        </section>
+        <section>
+          <p>
+            <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
+              <button type="button">Instalar o NEAS</button>
+          <!-- </a> -->
+          
+            |
+            <a href="login.html" class="iniciar-sessao-link">Iniciar Sessão</a>
+            | Idioma
+          </p>
+        </section>
+        <nav>
+            <section class="dropdown">
+                <button class="dropbtn">LOJA</button>
+                <article class="dropdown-content">
+                <a href="#">Opção A</a>
+                <a href="#">Opção B</a>
+                <a href="#">Opção C</a>
+                <a href="#">Opção D</a>
+                </article>
+            </section>
+        
+            <section class="dropdown">
+                <button class="dropbtn">COMUNIDADE</button>
+                <article class="dropdown-content">
+                    <a href="#">Opção A</a>
+                    <a href="#">Opção B</a>
+                    <a href="#">Opção C</a>
+                    <a href="#">Opção D</a>
+                </article>
+            </section>
+        
+            <section class="dropdown">
+                <button class="dropbtn">SOBRE</button>
+                <article class="dropdown-content">
+                    <a href="#">Opção A</a>
+                    <a href="#">Opção B</a>
+                    <a href="#">Opção C</a>
+                    <a href="#">Opção D</a>
+                </article>
+            </section>
+        
+            <section class="dropdown">
+                <button class="dropbtn">SUPORTE</button>
+                <article class="dropdown-content">
+                    <a href="#">Opção A</a>
+                    <a href="#">Opção B</a>
+                    <a href="#">Opção C</a>
+                    <a href="#">Opção D</a>
+                </article>
+            </section>
+        </nav>
+    </header>
+    <main class="login-main">
+        <section class="loginContainer">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <label for="email">Email:</label>
+                <input class="emailInput" type="email" id="email" name="email" required placeholder="Digite seu email">
 
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                <label for="senha">Senha:</label>
+                <input class="passInput" type="password" id="senha" name="senha" required placeholder="Digite sua senha">
 
-            <button type="submit">Entrar</button>
-            <button type="reset">Limpar</button>
-        </form>
-        <div class="options">
-            <a href="#" id="cadastrar">Cadastrar</a>
-            <a href="#" id="esqueceu_senha">Esqueceu a Senha?</a>
-        </div>
-    </div>
-    <script src="login.js"></script>
+                <button class="loginButton" type="submit">Entrar</button>
+                <button class="loginButton" type="reset">Limpar</button>
+            </form>
+            <section class="options">
+                <a href="#" id="cadastrar">Cadastrar</a>
+                <a href="#" id="esqueceu_senha">Esqueceu a Senha?</a>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>
+            ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
+        </p>
+    </footer>
 </body>
 
 </html>
