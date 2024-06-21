@@ -69,4 +69,9 @@
     background-color: #3e8e41;
   }
   
+  .admin-button {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+  }
   
