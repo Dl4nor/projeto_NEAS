@@ -2,30 +2,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const emailInput = document.getElementById('email');
     const senhaInput = document.getElementById('senha');
-    const cadastrarLink = document.getElementById('cadastrar'); 
-    const esqueceuSenhaLink = document.getElementById('esqueceu_senha'); 
-    const roleSelect = document.getElementById('role');
-    const adminFields = document.getElementById('adminFields');
-    const clientFields = document.getElementById('clientFields');
+    const loginButton = document.querySelector('.loginButton[type="submit"]');
+    const resetButton = document.querySelector('.loginButton[type="reset"]');
+    const cadastrarLink = document.getElementById('cadastrar');
+    const esqueceuSenhaLink = document.getElementById('esqueceu_senha');
 
-    // Exibe ou oculta os campos do administrador com base na seleção do tipo de usuário
-    roleSelect.addEventListener('change', function() {
-        if (this.value === 'administrador') {
-            adminFields.style.display = 'block'; // Mostra os campos do administrador
-        } else {
-            adminFields.style.display = 'none'; // Oculta os campos do administrador
-        }
+    // Event listener para o botão de login
+    loginButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão de envio do formulário
+
+        // Dispara a validação e autenticação do formulário
+        form.submit();
     });
 
-    // Exibe ou oculta os campos do cliente com base na seleção do tipo de usuário
-    roleSelect.addEventListener('change', function() {
-        if (this.value === 'cliente') {
-            clientFields.style.display = 'block'; // Mostra os campos de registro do cliente
-        } else {
-            clientFields.style.display = 'none'; // Oculta os campos de registro do cliente
-        }
+    // Event listener para o botão de reset
+    resetButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão de reset do formulário
+        form.reset(); // Reseta os campos do formulário
     });
 
+    // Event listener para o link de cadastro
+    cadastrarLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Adicionado para evitar o comportamento padrão do link
+        window.location.href = "cadastro.html"; // Redireciona para a página de cadastro
+    });
+
+    // Event listener para o link de esqueceu senha
+    esqueceuSenhaLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Adicionado para evitar o comportamento padrão do link
+        window.location.href = "esqueceu_senha.html"; // Redireciona para a página esqueceu senha
+    });
+
+    // Função para validar a senha
+    function validarSenha(senha) {
+        const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#@$%*?&])[A-Za-z\d@#$%*?&]{8,}$/;
+        return regexSenha.test(senha);
+    }
+
+    // Event listener para o formulário de login
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -64,20 +78,4 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Email ou senha incorretos. Por favor, tente novamente.');
         }
     });
-
-    cadastrarLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Adicionado para evitar o comportamento padrão do link
-        window.location.href = "cadastro.html"; // Redireciona para a página de cadastro
-    });
-
-    esqueceuSenhaLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Adicionado para evitar o comportamento padrão do link
-        window.location.href = "esqueceu_senha.html"; // Redireciona para a página esqueceu senha
-    });
-
-    // Função para validar a senha
-    function validarSenha(senha) {
-        const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#@$%*?&])[A-Za-z\d@#$%*?&]{8,}$/;
-        return regexSenha.test(senha);
-    }
 });
