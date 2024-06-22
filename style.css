@@ -109,7 +109,7 @@ footer {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  border: 2px solid #000000; /* Adiciona borda preta */
+  border: 2px solid #000000; 
   border-radius: 5px;
   box-sizing: border-box;
 }

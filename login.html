@@ -12,82 +12,118 @@
 
 <body>
     <header>
-        <section>
-            <a href="./NEAS.html">
-                <img src="./src/images/logo_gradient_neas.png" width="10%">
-            </a>
-        </section>
-        <section>
-          <p>
-            <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
-              <button type="button">Instalar o NEAS</button>
-          <!-- </a> -->
-          
-            |
-            <a href="login.html" class="iniciar-sessao-link">Iniciar Sessão</a>
-            | Idioma
-          </p>
-        </section>
-        <nav>
-            <section class="dropdown">
-                <button class="dropbtn">LOJA</button>
-                <article class="dropdown-content">
-                <a href="#">Opção A</a>
-                <a href="#">Opção B</a>
-                <a href="#">Opção C</a>
-                <a href="#">Opção D</a>
-                </article>
+        <header>
+            <section>
+                <a href="./NEAS.html">
+                    <img src="./src/images/logo_gradient_neas.png" width="10%">
+                </a>
             </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">COMUNIDADE</button>
-                <article class="dropdown-content">
+            <section>
+              <p>
+                <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
+                  <button type="button">Instalar o NEAS</button>
+              <!-- </a> -->
+              
+                <a href="login.html" class="iniciar-sessao-link">Iniciar Sessão</a>
+                | Idioma
+              </p>
+            </section>
+            <nav>
+                <section class="dropdown">
+                    <button class="dropbtn">LOJA</button>
+                    <article class="dropdown-content">
                     <a href="#">Opção A</a>
                     <a href="#">Opção B</a>
                     <a href="#">Opção C</a>
                     <a href="#">Opção D</a>
-                </article>
-            </section>
+                    </article>
+                </section>
+            
+                <section class="dropdown">
+                    <button class="dropbtn">COMUNIDADE</button>
+                    <article class="dropdown-content">
+                        <a href="#">Opção A</a>
+                        <a href="#">Opção B</a>
+                        <a href="#">Opção C</a>
+                        <a href="#">Opção D</a>
+                    </article>
+                </section>
+            
+                <section class="dropdown">
+                    <button class="dropbtn">SOBRE</button>
+                    <article class="dropdown-content">
+                        <a href="#">Opção A</a>
+                        <a href="#">Opção B</a>
+                        <a href="#">Opção C</a>
+                        <a href="#">Opção D</a>
+                    </article>
+                </section>
+            
+                <section class="dropdown">
+                    <button class="dropbtn">SUPORTE</button>
+                    <article class="dropdown-content">
+                        <a href="#">Opção A</a>
+                        <a href="#">Opção B</a>
+                        <a href="#">Opção C</a>
+                        <a href="#">Opção D</a>
+                    </article>
+                </section>
+            </nav>
         
-            <section class="dropdown">
-                <button class="dropbtn">SOBRE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">SUPORTE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
-        </nav>
     </header>
     <main class="login-main">
         <section class="loginContainer">
             <h2>Login</h2>
             <form action="#" method="post">
-                <label for="email">Email:</label>
-                <input class="emailInput" type="email" id="email" name="email" required placeholder="Digite seu email">
+                <div class="role-selection">
+                    <label for="role">Tipo de Usuário:</label>
+                    <select id="role" name="role">
+                        <option value="" disabled selected> O que você é: </option>
+                        <option value="cliente">Cliente</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </div>
 
-                <label for="senha">Senha:</label>
-                <input class="passInput" type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                <fieldset id="adminFields" style="display:none;">
+                    <legend>Dados do Administrador</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
 
-            <div class="role-selection">
-                <label for="role">Tipo de Usuário:</label>
-                <select id="role" name="role">
-                    <option value="cliente">Cliente</option>
-                    <option value="administrador">Administrador</option>
-                </select>
-            </div>
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" name="id" required placeholder="Digite seu ID">
 
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+
+                    <label for="email">Email:</label>
+                    <input class="admin-emailInput" type="email" id="email" name="email" required placeholder="Digite seu email">
+
+                    <label for="senha">Senha:</label>
+                    <input class="admin-passInput" type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+
+                </fieldset>
+
+                <fieldset id="clientFields" style="display:none;">
+                    <legend>Dados do Cliente</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF">
+                
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+                
+                    <label for="client-email">Email:</label>
+                    <input class="emailInput" type="email" id="client-email" name="client-email" required placeholder="Digite seu email">
+                
+                    <label for="endereco">Endereço:</label>
+                    <input class="text" type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
+                
+                    <label for="client-pass">Senha:</label>
+                    <input class="passInput" type="password" id="client-pass" name="client-pass" required placeholder="Digite sua senha">
+                </fieldset>
+                
                 <button class="loginButton" type="submit">Entrar</button>
                 <button class="loginButton" type="reset">Limpar</button>
             </form>
@@ -98,7 +134,7 @@
         </section>
     </main>
     <footer>
-        <p>
+       <p>
             ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
         </p>
     </footer>

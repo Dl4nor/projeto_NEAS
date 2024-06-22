@@ -4,6 +4,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const senhaInput = document.getElementById('senha');
     const cadastrarLink = document.getElementById('cadastrar'); 
     const esqueceuSenhaLink = document.getElementById('esqueceu_senha'); 
+    const roleSelect = document.getElementById('role');
+    const adminFields = document.getElementById('adminFields');
+    const clientFields = document.getElementById('clientFields');
+
+    // Exibe ou oculta os campos do administrador com base na seleção do tipo de usuário
+    roleSelect.addEventListener('change', function() {
+        if (this.value === 'administrador') {
+            adminFields.style.display = 'block'; // Mostra os campos do administrador
+        } else {
+            adminFields.style.display = 'none'; // Oculta os campos do administrador
+        }
+    });
+
+    // Exibe ou oculta os campos do cliente com base na seleção do tipo de usuário
+    roleSelect.addEventListener('change', function() {
+        if (this.value === 'cliente') {
+            clientFields.style.display = 'block'; // Mostra os campos de registro do cliente
+        } else {
+            clientFields.style.display = 'none'; // Oculta os campos de registro do cliente
+        }
+    });
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
