@@ -153,3 +153,9 @@ button:hover {
   align-items: center;
   align-content: center;
 }
+
+.admin-button {
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+}
