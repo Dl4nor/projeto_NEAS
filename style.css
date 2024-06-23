@@ -114,11 +114,7 @@ footer {
   box-sizing: border-box;
 }
 
-.campo-cliente input[type="nome"],
-.campo-cliente input[type="cpf"],
-.campo-cliente input[type="telefone"],
-.campo-cliente input[type="endereco"],
-.campo-cliente input[type="email"],
+.campo-cliente input,
 .campo-cliente input[type="password"] {
   width: 100%;
   padding: 12px 20px;
@@ -128,10 +124,7 @@ footer {
   box-sizing: border-box;
 }
 
-.campo-administrador input[type="nome"],
-.campo-administrador input[type="id"],
-.campo-administrador input[type="telefone"],
-.campo-administrador input[type="email"],
+.campo-administrador input,
 .campo-administrador input[type="password"] {
   width: 100%;
   padding: 12px 20px;

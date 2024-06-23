@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('cadastroForm');
     const roleSelect = document.getElementById('role');
@@ -11,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
 
-       // Função para gerar dados CSV a partir do LocalStorage
-       function generateCSVFromLocalStorage() {
+    // Função para gerar dados CSV a partir do LocalStorage
+    function generateCSVFromLocalStorage() {
         const userData = JSON.parse(localStorage.getItem('userData')) || {};
-        let csvData = Object.keys(userData).join(',') + '\n'; // Cabeçalho
+        let csvData = Object.keys(userData).join(' ,') + '\n'; // Cabeçalho
         for (const key in userData) {
             csvData += `${key},${userData[key]}\n`; // Linhas de dados
         }
@@ -32,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         link.click();
         document.body.removeChild(link);
     }
-
 
     // Adiciona evento de submit ao formulário
     form.addEventListener('submit', function(event) {
@@ -82,10 +82,27 @@ document.addEventListener('DOMContentLoaded', function() {
         // Salvar no LocalStorage
         localStorage.setItem('userData', JSON.stringify(userTypeFields));
 
-        alert('Dados salvos com sucesso!');
+        alert('Dados salvos com sucesso');
 
-         // Exportar para CSV
-         const csvData = generateCSVFromLocalStorage();
-         downloadCSV(csvData);
+        // Exportar para CSV
+        const csvData = generateCSVFromLocalStorage();
+        downloadCSV(csvData);
+    });
+
+    // Adiciona evento de change ao select de tipo de usuário
+    roleSelect.addEventListener('change', function() {
+        const adminFields = document.getElementById('adminFields');
+        const clientFields = document.getElementById('clientFields');
+
+        // Oculta ambos os conjuntos de campos
+        adminFields.style.display = 'none';
+        clientFields.style.display = 'none';
+
+        // Exibe os campos específicos para o tipo de usuário selecionado
+        if (this.value === 'administrador') {
+            adminFields.style.display = 'block';
+        } else if (this.value === 'cliente') {
+            clientFields.style.display = 'block';
+        }
     });
 });
