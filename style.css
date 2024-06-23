@@ -114,6 +114,26 @@ footer {
   box-sizing: border-box;
 }
 
+.campo-cliente input,
+.campo-cliente input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #000000; 
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.campo-administrador input,
+.campo-administrador input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #000000; 
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 .loginButton {
   width: 100%;
   background-color: #4CAF50;
