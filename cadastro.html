@@ -1,134 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
-    <link rel="stylesheet" href="style.css">
-    <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro</title>
 </head>
+
 <body>
-    <header>
-        <section>
-            <a href="./NEAS.html">
-                <img src="./src/images/logo_gradient_neas.png" width="10%">
-            </a>
-        </section>
-        <section>
+  <header>
+    <section class="main-header">
+      <section class="source-functions" align="right">
         <p>
-            <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
-            <button type="button">Instalar o NEAS</button>
-        <!-- </a> -->
-        
-            |
-            <a href="login.html" class="iniciar-sessao-link">Iniciar Sessão</a>
-            | Idioma
+          <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
+          <button class="install-button" type="button">Instalar o NEAS</button>
+          <!-- </a> -->
+          <a href="./login.html" class="label-button">Iniciar Sessão</a>
+          |
+          <a href="./login.html" class="label-button">Idioma</a>
+          |
+          <a href="./login.html" class="label-button">Admin</a>
         </p>
+      </section>
+      <nav class="pages-nav">
+        <section>
+          <a href="./NEAS.html">
+            <img class="neas-icon" src="./src/images/logo_gradient_neas.png" width="10%">
+          </a>
         </section>
-        <nav>
-            <section class="dropdown">
-                <button class="dropbtn">LOJA</button>
-                <article class="dropdown-content">
-                <a href="#">Opção A</a>
-                <a href="#">Opção B</a>
-                <a href="#">Opção C</a>
-                <a href="#">Opção D</a>
-                </article>
-            </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">COMUNIDADE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">SOBRE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">SUPORTE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
+
+        <nav class="nav-buttons">
+          <section class="dropdown">
+            <a href="./NEAS.html"><button class="dropbtn">LOJA</button></a>
+            <article class="dropdown-content">
+              <a href="./NEAS.html">Inicio </a>
+              <a href="#">Lista de Desejos</a>
+            </article>
+          </section>
+
+          <section class="dropdown">
+            <button class="dropbtn">COMUNIDADE</button>
+            <article class="dropdown-content">
+              <a href="#">Página de Inicio </a>
+              <a href="#">Discussões</a>
+            </article>
+          </section>
+
+          <section class="dropdown">
+            <button class="dropbtn">SOBRE</button>
+          </section>
+
+          <section class="dropdown">
+            <button class="dropbtn">SUPORTE</button>
+          </section>
         </nav>
-    </header>
-    <main class="login-main">
-        <section class="loginContainer">
-            <h2>Cadastro</h2>
-            <form id="cadastroForm">
-               
-                <div class="role-selection">
-                    <label for="role">Tipo de Usuário:</label>
-                    <select id="role" name="role">
-                        <option value="" disabled selected> O que você é: </option>
-                        <option value="cliente">Cliente</option>
-                        <option value="administrador">Administrador</option>
-                    </select>
-                </div>
+      </nav>
+    </section>
+  </header>
+  <main class="login-main">
+    <section class="loginContainer">
+      <h2>Cadastro</h2>
+      <form id="cadastroForm">
 
-                <fieldset id="adminFields" class="campo-administrador" style="display:none;">
-                    <legend>Dados do Administrador</legend>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+        <div class="role-selection">
+          <label for="role">Tipo de Usuário:</label>
+          <select id="role" name="role">
+            <option value="" disabled selected> O que você é: </option>
+            <option value="cliente">Cliente</option>
+            <option value="administrador">Administrador</option>
+          </select>
+        </div>
 
-                    <label for="id">ID:</label>
-                    <input type="text" id="id" name="id" required placeholder="Digite seu ID">
+        <fieldset id="adminFields" class="campo-administrador" style="display:none;">
+          <legend>Dados do Administrador</legend>
+          <label for="nome">Nome:</label>
+          <input class="data-input" type="text" id="nome" name="nome" required placeholder="Digite seu nome">
 
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+          <label for="id">ID:</label>
+          <input class="data-input" type="text" id="id" name="id" required placeholder="Digite seu ID">
 
-                    <label for="email">Email:</label>
-                    <input class="admin-emailInput" type="email" id="email" name="email" required placeholder="Digite seu email">
+          <label for="telefone">Telefone:</label>
+          <input class="data-input" type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
 
-                    <label for="senha">Senha:</label>
-                    <input class="admin-passInput" type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+          <label for="email">Email:</label>
+          <input class="data-input" class="admin-emailInput" type="email" id="email" name="email" required
+            placeholder="Digite seu email">
 
-                </fieldset>
+          <label for="senha">Senha:</label>
+          <input class="data-input" class="admin-passInput" type="password" id="senha" name="senha" required
+            placeholder="Digite sua senha">
 
-                <fieldset id="clientFields" class="campo-cliente" style="display:none;">
-                    <legend>Dados do Cliente</legend>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-                
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF">
-                
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
-                
-                    <label for="client-email">Email:</label>
-                    <input class="emailInput" type="email" id="client-email" name="client-email" required placeholder="Digite seu email">
-                
-                    <label for="endereco">Endereço:</label>
-                    <input class="text" type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
-                
-                    <label for="client-pass">Senha:</label>
-                    <input class="passInput" type="password" id="client-pass" name="client-pass" required placeholder="Digite sua senha">
-                </fieldset>
-                <button type="submit" class="loginButton">Cadastrar</button>
-            </form>
-        </section>
-        <footer>
-            <p>
-                ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
-            </p>
-        </footer>
-    </main>
-    <script src="cadastro.js"></script>
+        </fieldset>
+
+        <fieldset id="clientFields" class="campo-cliente" style="display:none;">
+          <legend>Dados do Cliente</legend>
+          <label for="nome">Nome:</label>
+          <input class="data-input" type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+          <label for="cpf">CPF:</label>
+          <input class="data-input" type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF">
+
+          <label for="telefone">Telefone:</label>
+          <input class="data-input" type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+
+          <label for="client-email">Email:</label>
+          <input class="data-input" class="emailInput" type="email" id="client-email" name="client-email" required
+            placeholder="Digite seu email">
+
+          <label for="endereco">Endereço:</label>
+          <input class="data-input" class="text" type="text" id="endereco" name="endereco" required
+            placeholder="Digite seu endereço">
+
+          <label for="client-pass">Senha:</label>
+          <input class="data-input" type="password" id="client-pass" name="client-pass" required
+            placeholder="Digite sua senha">
+        </fieldset>
+        <button type="submit" class="loginButton">Cadastrar</button>
+      </form>
+    </section>
+    <footer>
+      <p>
+        ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
+      </p>
+    </footer>
+  </main>
+  <script src="cadastro.js"></script>
 </body>
+
 </html>

@@ -12,7 +12,6 @@ body {
   background: linear-gradient(180deg, rgba(0, 32, 36, 1) 6%, rgba(9, 121, 27, 1) 68%, rgba(0, 255, 192, 1) 100%);
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  /* margin-bottom: 50%; */
   min-height: 100%;
 }
 
@@ -26,8 +25,8 @@ main {
 
 header {
   box-shadow: 0 0 10px black;
-  padding: 10px;
-  background-color: #2a2e36;
+  padding: 3px;
+  background-color: #141923;
 }
 
 nav {
@@ -65,34 +64,47 @@ footer {
 .dropdown {
   position: relative;
   display: inline-block;
+  align-content: center;
+  padding: 5px;
+}
+
+.dropbtn {
+  background-color: #00000000;
+  color: rgb(202, 204, 221);
+  font-weight: bold;
+  font-size: 130%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dropdown:hover .dropbtn {
+  color: #ffffff;
+  text-shadow: 0 0 5px white;
+  cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: #3a3a3a;
+  min-width: max-content;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color: rgb(255, 255, 255);
+  padding: 8px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
 }
 
 .loginContainer {
@@ -105,27 +117,7 @@ footer {
   border: 2px solid #000000
 }
 
-.emailInput[type="email"], .passInput[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 2px solid #000000; 
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.campo-cliente input,
-.campo-cliente input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 2px solid #000000; 
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.campo-administrador input,
-.campo-administrador input[type="password"] {
+.data-input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -164,18 +156,31 @@ button:hover {
 
 .source-functions{
   margin: 0px auto 0px auto;
+  padding: 10px 0 0px 10px;
 }
 
 .main-header {
-  padding: 5px 0px 10px 0px;
-  margin: 0px 10% 0 25% ;
-  display: flex;
+  padding: 0px 10px 10px 0px;
+  margin: 0px 17% 0 17% ;
   align-items: center;
   align-content: center;
+  font-size: small;
+}
+
+.pages-nav {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #007bff00;
 }
 
 .neas-icon {
-  width: 150px
+  width: 150px;
+}
+
+.nav-buttons {
+  margin-left: 5%;
+  background-color: #00000000;
 }
 
 .install-button {
@@ -184,13 +189,23 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 0 3px #0dff00;
   font-weight: bold;
-  padding: 3px;
+  padding: 2px 7px;
   cursor: pointer;
 }
 
 .install-button:hover {
   background-color: rgb(118, 0, 0);
   box-shadow: 0 0 3px red;
+}
+
+.label-button {
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.59);
+  text-decoration: solid;
+}
+
+.label-button:hover {
+  color: white;
 }
 
 .admin-button {

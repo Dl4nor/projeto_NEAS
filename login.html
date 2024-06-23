@@ -2,100 +2,89 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
-    <script src="login.js"></script>
-    <title>Tela de Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+  <script src="login.js"></script>
+  <title>Tela de Login</title>
 </head>
 
 <body>
-    <header>
-        <header>
-            <section>
-                <a href="./NEAS.html">
-                    <img src="./src/images/logo_gradient_neas.png" width="10%">
-                </a>
-            </section>
-            <section>
-              <p>
-                <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
-                  <button type="button">Instalar o NEAS</button>
-              <!-- </a> -->
-              
-                <a href="login.html" class="iniciar-sessao-link">Iniciar Sessão</a>
-                | Idioma
-              </p>
-            </section>
-            <nav>
-                <section class="dropdown">
-                    <button class="dropbtn">LOJA</button>
-                    <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                    </article>
-                </section>
-            
-                <section class="dropdown">
-                    <button class="dropbtn">COMUNIDADE</button>
-                    <article class="dropdown-content">
-                        <a href="#">Opção A</a>
-                        <a href="#">Opção B</a>
-                        <a href="#">Opção C</a>
-                        <a href="#">Opção D</a>
-                    </article>
-                </section>
-            
-                <section class="dropdown">
-                    <button class="dropbtn">SOBRE</button>
-                    <article class="dropdown-content">
-                        <a href="#">Opção A</a>
-                        <a href="#">Opção B</a>
-                        <a href="#">Opção C</a>
-                        <a href="#">Opção D</a>
-                    </article>
-                </section>
-            
-                <section class="dropdown">
-                    <button class="dropbtn">SUPORTE</button>
-                    <article class="dropdown-content">
-                        <a href="#">Opção A</a>
-                        <a href="#">Opção B</a>
-                        <a href="#">Opção C</a>
-                        <a href="#">Opção D</a>
-                    </article>
-                </section>
-            </nav>
-        
-    </header>
-    <main class="login-main">
-        <section class="loginContainer">
-            <h2>Login</h2>
-            <form action="#" method="post">
-                <label for="email">Email:</label>
-                <input class="emailInput" type="email" id="email" name="email" required placeholder="Digite seu email">
-
-                <label for="senha">Senha:</label>
-                <input class="passInput" type="password" id="senha" name="senha" required placeholder="Digite sua senha">
- 
-                <button class="loginButton" type="submit">Entrar</button>
-                <button class="loginButton" type="reset">Limpar</button>
-            </form>
-            <section class="options">
-                <a href="#" id="cadastrar">Cadastrar</a>
-                <a href="#" id="esqueceu_senha">Esqueceu a Senha?</a>
-            </section>
-        </section>
-    </main>
-     <script src="login.js"></script>
-    <footer>
-       <p>
-            ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
+  <header>
+    <section class="main-header">
+      <section class="source-functions" align="right">
+        <p>
+          <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
+          <button class="install-button" type="button">Instalar o NEAS</button>
+          <!-- </a> -->
+          <a href="./login.html" class="label-button">Iniciar Sessão</a>
+          |
+          <a href="./login.html" class="label-button">Idioma</a>
+          |
+          <a href="./login.html" class="label-button">Admin</a>
         </p>
-    </footer>
+      </section>
+      <nav class="pages-nav">
+        <section>
+          <a href="./NEAS.html">
+            <img class="neas-icon" src="./src/images/logo_gradient_neas.png" width="10%">
+          </a>
+        </section>
+
+        <nav class="nav-buttons">
+          <section class="dropdown">
+            <a href="./NEAS.html"><button class="dropbtn">LOJA</button></a>
+            <article class="dropdown-content">
+              <a href="./NEAS.html">Inicio </a>
+              <a href="#">Lista de Desejos</a>
+            </article>
+          </section>
+
+          <section class="dropdown">
+            <button class="dropbtn">COMUNIDADE</button>
+            <article class="dropdown-content">
+              <a href="#">Página de Inicio </a>
+              <a href="#">Discussões</a>
+            </article>
+          </section>
+
+          <section class="dropdown">
+            <button class="dropbtn">SOBRE</button>
+          </section>
+
+          <section class="dropdown">
+            <button class="dropbtn">SUPORTE</button>
+          </section>
+        </nav>
+      </nav>
+    </section>
+  </header>
+  <main class="login-main">
+    <section class="loginContainer">
+      <h2>Login</h2>
+      <form action="#" method="post">
+        <label for="email">Email:</label>
+        <input class="data-input" type="email" id="email" name="email" required placeholder="Digite seu email">
+
+        <label for="senha">Senha:</label>
+        <input class="data-input" type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+
+        <button class="loginButton" type="submit">Entrar</button>
+        <button class="loginButton" type="reset">Limpar</button>
+      </form>
+      <section class="options">
+        <a href="#" id="cadastrar">Cadastrar</a>
+        <a href="#" id="esqueceu_senha">Esqueceu a Senha?</a>
+      </section>
+    </section>
+  </main>
+  <script src="login.js"></script>
+  <footer>
+    <p>
+      ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
+    </p>
+  </footer>
 </body>
 
 </html>
