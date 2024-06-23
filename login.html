@@ -75,19 +75,19 @@
         <section class="loginContainer">
             <h2>Login</h2>
             <form action="#" method="post">
-                <div class="role-selection">
+                <fieldset class="role-selection">
                     <label for="role">Tipo de Usuário:</label>
                     <select id="role" name="role">
                         <option value="" disabled selected> O que você é: </option>
                         <option value="cliente">Cliente</option>
                         <option value="administrador">Administrador</option>
                     </select>
-                </div>
+                </fieldset>
 
                 <fieldset id="adminFields" style="display:none;">
                     <legend>Dados do Administrador</legend>
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                    <input class="passInput" type="text" id="nome" name="nome" required placeholder="Digite seu nome">
 
                     <label for="id">ID:</label>
                     <input type="text" id="id" name="id" required placeholder="Digite seu ID">
