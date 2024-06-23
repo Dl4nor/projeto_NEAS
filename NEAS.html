@@ -1,74 +1,25 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
-  <title> Bem-vindo(a) ao NEAS </title>
-</head>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="./src/head_foot.js"></script>
+    <title> Bem-vindo(a) ao NEAS </title>
+  </head>
 
-<body>
-  <header>
-    <section class="main-header">
-      <section class="source-functions" align="right">
-        <p>
-          <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
-          <button class="install-button" type="button">Instalar o NEAS</button>
-          <!-- </a> -->
-          <a href="./login.html" class="label-button">Iniciar Sessão</a>
-          |
-          <a href="./login.html" class="label-button">Idioma</a>
-          |
-          <a href="./login.html" class="label-button">Admin</a>
-        </p>
+  <body>
+    <header id="header"></header>
+    <main>
+      <section>
+        <video muted autoplay loop name="media" width="100%">
+          <source src="src/images/webm_page_bg_portuguese.webm" type="video/webm">
+        </video>
       </section>
-      <nav class="pages-nav">
-        <section>
-          <a href="./NEAS.html">
-            <img class="neas-icon" src="./src/images/logo_gradient_neas.png" width="10%">
-          </a>
-        </section>
-
-        <nav class="nav-buttons">
-          <section class="dropdown">
-            <a href="./NEAS.html"><button class="dropbtn">LOJA</button></a>
-            <article class="dropdown-content">
-              <a href="./NEAS.html">Inicio </a>
-              <a href="#">Lista de Desejos</a>
-            </article>
-          </section>
-
-          <section class="dropdown">
-            <button class="dropbtn">COMUNIDADE</button>
-            <article class="dropdown-content">
-              <a href="#">Página de Inicio </a>
-              <a href="#">Discussões</a>
-            </article>
-          </section>
-
-          <section class="dropdown">
-            <button class="dropbtn">SOBRE</button>
-          </section>
-
-          <section class="dropdown">
-            <button class="dropbtn">SUPORTE</button>
-          </section>
-        </nav>
-      </nav>
-    </section>
-  </header>
-  <main>
-    <section>
-      <video muted autoplay loop name="media" width="100%">
-        <source src="src/images/webm_page_bg_portuguese.webm" type="video/webm">
-      </video>
-    </section>
-  </main>
-  <footer>
-    <p>
-      ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
-    </p>
-  </footer>
-</body>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>
