@@ -217,10 +217,9 @@ button:hover {
 /* Classe referente aos jogos que aparecem em destaque  */
 
 .games-destaque {
-  margin: 5px 20%;
-  max-width: fit-content;
-  /* max-height: max-content; */
-
+  margin: 5px 15% 5px 18%;
+  width: max-content;
+  max-height: fit-content;
 }
 
 .games-destaque p {
@@ -273,12 +272,12 @@ button:hover {
 }
 
 .games-destaque img[type=main] {
-  max-height: 400px;
+  max-height: 370px;
   box-shadow: 0 0 30px black;
 }
 
 .games-destaque img[type=examples] {
-  max-height: 80px;
+  max-height: 70px;
   padding: 10px 10px 0 0;
 }
 
