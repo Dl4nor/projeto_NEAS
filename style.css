@@ -16,10 +16,7 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #f0f0f000;
-}
-
-main {
-  background-color: #172134;
+  padding-bottom: 5%;
 }
 
 .login-main{
@@ -30,10 +27,6 @@ header {
   box-shadow: 0 0 10px black;
   padding: 3px;
   background-color: #141923;
-}
-
-nav {
-  background-color: #333;
 }
 
 nav p {
@@ -60,6 +53,7 @@ footer {
   padding: 10px;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
   font-size: xx-small;
@@ -219,3 +213,91 @@ button:hover {
   top: 20px; 
   right: 20px; 
 }
+
+/* Classe referente aos jogos que aparecem em destaque  */
+
+.games-destaque {
+  margin: 5px 20%;
+  max-width: fit-content;
+  /* max-height: max-content; */
+
+}
+
+.games-destaque p {
+  padding: 10px 0;
+  background-color: #00000000;
+  left: 20%;
+  font-size: medium;
+}
+
+.games-destaque nav {
+  background-color: #1117555d;
+  box-shadow: 0 0 7px #000000ad;
+}
+
+.games-destaque a {
+  display: flex;
+  text-decoration: none;
+}
+
+.games-destaque section p[type=title] {
+  text-align: left;
+  padding: 17px;
+  margin-bottom: -20px;
+  font-size: x-large;
+  font-weight: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-content: center;
+}
+
+.games-destaque section p {
+  text-align: left;
+  padding: 12px;
+  font-size: x-large;
+  font-weight: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.games-destaque p[type=popular] {
+  padding: 2px 5px;
+  margin-left: 17px;
+  margin-bottom: 10%;
+  background-color: #575957ee;
+  font-size: x-small;
+  width: max-content;
+}
+
+.games-destaque p[type=preco] {
+  font-size: small;
+  bottom: 0;
+}
+
+.games-destaque img[type=main] {
+  max-height: 400px;
+  box-shadow: 0 0 30px black;
+}
+
+.games-destaque img[type=examples] {
+  max-height: 80px;
+  padding: 10px 10px 0 0;
+}
+
+/* Fim da classe games-destaque */
+
+/* ScrollBar */
+
+body::-webkit-scrollbar {
+  width: 9px;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(23, 49, 27);     
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #192234;
+  border-radius: 30px;
+}
+
+/* Fim da ScrollBar */
