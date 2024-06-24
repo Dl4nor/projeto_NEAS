@@ -1,46 +1,108 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('cadastroForm');
-    const emailInput = document.getElementById('email');
-    const senhaInput = document.getElementById('senha'); // Adiciona referência ao input da senha
+    const roleSelect = document.getElementById('role');
 
+    // Função para validar o campo de seleção do tipo de usuário
+    function validateRole() {
+        if (!roleSelect.value) {
+            alert('Por favor, selecione um tipo de usuário.');
+            return false;
+        }
+        return true;
+    }
+
+    // Função para gerar dados CSV a partir do LocalStorage
+    function generateCSVFromLocalStorage() {
+        const userData = JSON.parse(localStorage.getItem('userData')) || {};
+        let csvData = Object.keys(userData).join(' ,') + '\n'; // Cabeçalho
+        for (const key in userData) {
+            csvData += `${key},${userData[key]}\n`; // Linhas de dados
+        }
+        return csvData;
+    }
+
+    // Função para baixar o arquivo CSV
+    function downloadCSV(csvData, filename = "dados_usuarios") {
+        const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", filename + ".csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    // Adiciona evento de submit ao formulário
     form.addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Impede o comportamento padrão de envio do formulário
 
-        const email = emailInput.value.trim();
-        const senha = senhaInput.value.trim(); // Obtém a senha digitada pelo usuário
+        // Validação inicial
+        if (!validateRole()) {
+            return; // Sai da função se a validação falhar
+        }
 
-        // Verifica se o email contém '@'
-        if (!email.includes('@')) {
-            alert('O email deve conter @.');
+        // Coleta os valores dos campos do formulário
+        const role = roleSelect.value;
+
+        // Mostra os campos específicos para o tipo de usuário selecionado
+        const adminFields = document.getElementById('adminFields');
+        const clientFields = document.getElementById('clientFields');
+        if (role === 'administrador') {
+            adminFields.style.display = 'block';
+            clientFields.style.display = 'none';
+        } else if (role === 'cliente') {
+            clientFields.style.display = 'block';
+            adminFields.style.display = 'none';
+        } else {
+            alert('Tipo de usuário não reconhecido.');
             return;
         }
 
-        // Verifica se o domínio do email é válido
-        const dominiosValidos = ['gmail.com', 'hotmail.com', 'outlook.com'];
-        const dominioEmail = email.split('@')[1].toLowerCase();
-        if (!dominiosValidos.includes(dominioEmail)) {
-            alert('Domínio de email inválido. Por favor, use gmail.com, hotmail.com ou outlook.com.');
-            return;
+        // Aqui você pode adicionar mais validações conforme necessário
+
+        // Coleta os valores dos campos específicos para cada tipo de usuário
+        let userTypeFields = {};
+        if (role === 'administrador') {
+            userTypeFields['nome'] = document.getElementById('nome').value;
+            userTypeFields['id'] = document.getElementById('id').value;
+            userTypeFields['telefone'] = document.getElementById('telefone').value;
+            userTypeFields['email'] = document.getElementById('email').value;
+            userTypeFields['senha'] = document.getElementById('senha').value;
+        } else if (role === 'cliente') {
+            userTypeFields['nome'] = document.getElementById('nome').value;
+            userTypeFields['cpf'] = document.getElementById('cpf').value;
+            userTypeFields['telefone'] = document.getElementById('telefone').value;
+            userTypeFields['client-email'] = document.getElementById('client-email').value;
+            userTypeFields['endereco'] = document.getElementById('endereco').value;
+            userTypeFields['client-pass'] = document.getElementById('client-pass').value;
         }
 
-        // Verifica se a senha atende aos requisitos
-        if (!validarSenha(senha)) {
-            alert('A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, um número e um caractere especial.');
-            return;
-        }
+        // Salvar no LocalStorage
+        localStorage.setItem('userData', JSON.stringify(userTypeFields));
 
-        // Adiciona o email e a senha ao armazenamento local
-        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        usuarios.push({ email, senha }); // Armazena ambos, email e senha
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        alert('Dados salvos com sucesso');
 
-        alert('Cadastro realizado com sucesso Agora você pode fazer login.');
-        window.location.href = "login.html"; // Redireciona para a página de login
+        // Exportar para CSV
+        const csvData = generateCSVFromLocalStorage();
+        downloadCSV(csvData);
     });
 
-    // Função para validar a senha
-    function validarSenha(senha) {
-        const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#@$%*?&])[A-Za-z\d@#$%*?&]{8,}$/;
-        return regexSenha.test(senha);
-    }
+    // Adiciona evento de change ao select de tipo de usuário
+    roleSelect.addEventListener('change', function() {
+        const adminFields = document.getElementById('adminFields');
+        const clientFields = document.getElementById('clientFields');
+
+        // Oculta ambos os conjuntos de campos
+        adminFields.style.display = 'none';
+        clientFields.style.display = 'none';
+
+        // Exibe os campos específicos para o tipo de usuário selecionado
+        if (this.value === 'administrador') {
+            adminFields.style.display = 'block';
+        } else if (this.value === 'cliente') {
+            clientFields.style.display = 'block';
+        }
+    });
 });

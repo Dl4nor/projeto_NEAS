@@ -1,73 +1,44 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
-  <title> Bem-vindo(a) ao NEAS </title>
-</head>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="./src/head_foot.js"></script>
+    <title> Bem-vindo(a) ao NEAS </title>
+  </head>
 
-<body>
-  <header>
-    <section class="main-header">
+  <body>
+    <header id="header"></header>
+    <main>
       <section>
-          <a href="./NEAS.html">
-              <img src="./src/images/logo_gradient_neas.png" width="10%">
+        <video muted autoplay loop name="media" width="100%">
+          <source src="src/images/webm_page_bg_portuguese.webm" type="video/webm">
+        </video>
+      </section>
+      <section class="games-destaque">
+        <p> DESTAQUES E RECOMENDADOS </p>
+        <nav>
+          <a href="#">
+            <img src="./src/games/img/Counter-Strike-CS2-CS-GO.jpg" type="main">
+            
+            <section>
+              <p type="title"> Counter-Strike 2 </p> <br>
+              <img src="./src/games/img/cs2.webp" type="examples">
+              <img src="./src/games/img/dust2_back_plat_s2.jpg" type="examples"> <br>
+              <img src="./src/games/img/22163514602266.webp" type="examples">
+              <img src="./src/games/img/cs2-1-1-800x452.jpg" type="examples"> <br>
+              <p> Já disponível</p>
+              <p type="popular"> Popular </p>
+              <p type="preco"> Gratuito p/ Jogar</p>
+            </section>
           </a>
+        </nav>
       </section>
-      <section class="source-functions" align="right">
-        <p>
-          <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
-            <button type="button">Instalar o NEAS</button>
-        <!-- </a> -->
-          |
-          <a href="login.html" class="iniciar-sessao-link">Iniciar Sessão</a>
-          | Idioma
-        </p>
-      </section>
-    </section>
-    <nav>
-      <section class="admin-button">
-        <button type="button">Admin</button>
-      </section>
-      <section class="dropdown">
-        <button class="dropbtn">LOJA</button>
-        <article class="dropdown-content">
-          <a href="#">Inicio </a>
-          <a href="#">Lista de Desejos</a>
-        </article>
-      </section>
-
-      <section class="dropdown">
-        <button class="dropbtn">COMUNIDADE</button>
-        <article class="dropdown-content">
-          <a href="#">Página de Inicio </a>
-          <a href="#">Discussões</a>
-        </article>
-      </section>
-
-      <div class="dropdown">
-        <button class="dropbtn">SOBRE</button>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">SUPORTE</button>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <video muted autoplay loop name="media" width="100%">
-        <source src="src/images/webm_page_bg_portuguese.webm" type="video/webm">
-      </video>
-    </section>
-  </main>
-  <footer>
-    <p>
-        ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
-    </p>
-  </footer>
-</body>
-      
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>

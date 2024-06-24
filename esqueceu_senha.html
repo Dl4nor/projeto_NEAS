@@ -1,91 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
-    <link rel="stylesheet" href="style.css">
-    <title>Esqueceu a Senha?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="esquece_senha.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="./src/head_foot.js"></script>
+  <title>Esqueceu a Senha?</title>
 </head>
+
 <body>
-    <header>
-        <section>
-            <a href="./NEAS.html">
-                <img src="./src/images/logo_gradient_neas.png" width="10%">
-            </a>
-        </section>
-        <section>
-        <p>
-            <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
-            <button type="button">Instalar o NEAS</button>
-        <!-- </a> -->
-        
-            |
-            <a href="login.html" class="iniciar-sessao-link">Iniciar Sessão</a>
-            | Idioma
-        </p>
-        </section>
-        <nav>
-            <section class="dropdown">
-                <button class="dropbtn">LOJA</button>
-                <article class="dropdown-content">
-                <a href="#">Opção A</a>
-                <a href="#">Opção B</a>
-                <a href="#">Opção C</a>
-                <a href="#">Opção D</a>
-                </article>
-            </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">COMUNIDADE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">SOBRE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
-        
-            <section class="dropdown">
-                <button class="dropbtn">SUPORTE</button>
-                <article class="dropdown-content">
-                    <a href="#">Opção A</a>
-                    <a href="#">Opção B</a>
-                    <a href="#">Opção C</a>
-                    <a href="#">Opção D</a>
-                </article>
-            </section>
-        </nav>
-    </header>
-    <main class="login-main">
-        <section class="loginContainer">
-            <h2>Esqueceu a Senha?</h2>
-            <form id="esqueceuSenhaForm">
-                <label for="email">Email:</label>
-                <input class="emailInput" type="email" id="email" name="email" required placeholder="Digite seu email">
+  <header id="header"></header>
+  <main class="login-main">
+    <section class="loginContainer">
+      <h2>Esqueceu a Senha?</h2>
+      <form id="esqueceuSenhaForm">
+        <label for="email">Email:</label>
+        <input class="data-input" type="email" id="email" name="email" required placeholder="Digite seu email">
 
-                <label for="novaSenha">Nova Senha:</label>
-                <input class="passInput" type="password" id="novaSenha" name="novaSenha" required placeholder="Digite sua nova senha">
+        <label for="novaSenha">Nova Senha:</label>
+        <input class="data-input" type="password" id="novaSenha" name="novaSenha" required
+          placeholder="Digite sua nova senha">
 
-                <button type="submit" class="loginButton">Redefinir Senha</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>
-            ©2024 - All rights reserved to Ronald V. Silva and Guilherme Francisco
-        </p>
-    </footer>
-    <script src="esquece_senha.js"></script>
+        <button type="submit" class="loginButton">Redefinir Senha</button>
+      </form>
+    </section>
+  </main>
+  <footer id="footer"></footer>
 </body>
+
 </html>
