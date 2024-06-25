@@ -46,7 +46,7 @@
         </section>
 
         <section class="dropdown">
-          <button class="dropbtn">SOBRE</button>
+          <button class="dropbtn" id="botaoSobre">SOBRE</button>
         </section>
 
         <section class="dropdown">
@@ -55,5 +55,10 @@
       </nav>
     </nav>
   </section>
+  <script>
+    document.getElementById('botaoSobre').addEventListener('click', function() {
+        window.location.href = './sobre.html';
+    });
+    </script>
 </body>
 </html>
