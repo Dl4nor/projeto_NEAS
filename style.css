@@ -281,7 +281,29 @@ button:hover {
   padding: 10px 10px 0 0;
 }
 
+.games-destaque img[type=default] {
+  max-height: 370px;
+  box-shadow: 0 0 30px black;
+}
+
 /* Fim da classe games-destaque */
+
+/* Criando jogos para venda */
+
+.games-destaque--vendas {
+  padding: 5%;
+  margin: 10px 10%;
+  background-color: #1b35468b;
+}
+
+.games-destaque--vendas section {
+  font-size: normal;
+}
+
+.fundo-vendas {
+  display: flex;
+  margin-left: 10%;
+}
 
 /* ScrollBar */
 
@@ -300,3 +322,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Fim da ScrollBar */
+
+form p {
+color: black;
+font-size: xx-large;
+}
