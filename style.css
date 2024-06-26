@@ -29,6 +29,10 @@ header {
   background-color: #141923;
 }
 
+header .install-button {
+  padding: 1px 3px;
+}
+
 nav p {
   display: block;
   color: white;
@@ -88,6 +92,7 @@ footer {
   min-width: max-content;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  text-align: left;
 }
 
 .dropdown-content a {
@@ -116,10 +121,27 @@ footer {
   border: 2px solid #000000
 }
 
+.loginButton:hover {
+  background-color: #58fd5d;
+}
+
 .data-input {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 3px 0 20px;
+  border: 2px solid #000000; 
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.loginContainer textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 70%;
+  max-height: 200px;
+  min-height: 50px;
+  padding: 12px 20px;
+  margin: 3px 0 20px;
   border: 2px solid #000000; 
   border-radius: 5px;
   box-sizing: border-box;
@@ -139,7 +161,7 @@ footer {
 }
 
 button:hover {
-  opacity: 0.8;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out, box-shadow 300ms ease-in-out ;
 }
 
 .options {
@@ -204,8 +226,18 @@ button:hover {
   text-decoration: solid;
 }
 
+.dropdown .label-button {
+  background-color: #00000000;
+  cursor: pointer;
+}
+
 .label-button:hover {
   color: white;
+}
+
+.label-button .dropdown-content {
+  text-align: left;
+
 }
 
 .admin-button {
@@ -219,7 +251,7 @@ button:hover {
 .games-destaque {
   margin: 5px 15% 5px 18%;
   width: max-content;
-  max-height: fit-content;
+  max-height: max-content;
 }
 
 .games-destaque p {
@@ -273,15 +305,104 @@ button:hover {
 
 .games-destaque img[type=main] {
   max-height: 370px;
+  aspect-ratio: auto 16/9;
   box-shadow: 0 0 30px black;
 }
 
 .games-destaque img[type=examples] {
+  aspect-ratio: 16/9;
   max-height: 70px;
   padding: 10px 10px 0 0;
 }
 
+.games-destaque img[type=default] {
+  max-height: 370px;
+  box-shadow: 0 0 30px black;
+}
+
 /* Fim da classe games-destaque */
+
+/* Criando jogos para venda */
+
+.games-destaque--vendas {
+  margin: 10% 0 0 0%;
+  min-width: max-content;
+  transform: scale(0.9);
+}
+
+.games-destaque--vendas img[type="main"]{
+  max-height: 370px;
+}
+
+.games-destaque--vendas section {
+  font-size: normal;
+}
+
+/* .games-destaque--vendas section p[type="title"] {
+  width: 200px;
+} */
+
+.fundo-vendas {
+  display: flex;
+  margin: 20px 30px;
+  padding: 0 40px;
+  min-width: min-content;
+  background-color: #151b3a84;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #000000;
+}
+
+.fundo-vendas aside {
+  padding: 10px 5px;
+  margin: 5% 0;
+  background-color: #0c091a;
+  color: white;
+  box-shadow: 0 0 10px #00ff0846;
+}
+
+.fundo-vendas aside h2 {
+  color: white;
+  margin: 20px
+}
+
+.fundo-vendas input[type="file"] {
+  display: none;
+}
+
+.fundo-vendas .input-image {
+  padding: 5px 5px 0px 5px;
+  margin-bottom: 20px;
+  width: 280px;
+  aspect-ratio: 16/9;
+  background-color: #251c5089;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed black;
+  color: #cfcfcf;
+  cursor: pointer;
+  transition: color 300ms ease-in-out, border 300ms ease-in-out, background 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+.fundo-vendas .input-image:hover {
+  color: #09bc00;
+  border-color: #09bc00;
+  background-color:#172134;
+  box-shadow: 0 0 10px #09bc00;
+}
+
+.fundo-vendas .input-image:active {
+  color: black;
+  border-color: black;
+  background-color:#2b215689;
+  box-shadow: 0 0 2px #09bc00;
+}
+
+.input-image .main-img{
+  max-width: 100%;
+}
+
+/* fim da classe vendas */
 
 /* ScrollBar */
 
@@ -329,7 +450,7 @@ body::-webkit-scrollbar-thumb {
       overflow: hidden;
     }
   
-    .install-button {
+    .left-section .install-button {
       background-color: #00ff08;
       border: 2px solid #000000;
       border-radius: 10px;
@@ -338,11 +459,10 @@ body::-webkit-scrollbar-thumb {
       padding: 15px 20px; 
       cursor: pointer;
       text-align: center; 
-      display: inline-block; 
-      transition: background-color 0.3s ease; 
+      display: inline-block;
     }
     
-    .install-button:hover {
+    .left-section .install-button:hover {
       background-color: rgb(118, 0, 0);
       box-shadow: 0 0 3px red;
     }
