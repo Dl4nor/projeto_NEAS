@@ -5,6 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="../Scripts/NEAS.js"></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
         <button class="install-button" type="button">Instalar o NEAS</button>
         <!-- </a> -->
-        <a href="./login.html" class="label-button">Iniciar Sessão</a>
+        <a id="login" href="./login.html" class="label-button">Iniciar Sessão</a>
         |
         <a href="#" class="label-button">Idioma</a>
       </p>
@@ -38,7 +39,9 @@
         </section>
 
         <section class="dropdown">
-          <a href="./NEAS.html"><button class="dropbtn">LOJA</button></a>
+          <a href="./NEAS.html">
+            <button class="dropbtn">LOJA</button>
+          </a>
           <article class="dropdown-content">
             <a href="./NEAS.html">Inicio </a>
             <a href="#">Lista de Desejos</a>
@@ -54,7 +57,9 @@
         </section>
 
         <section class="dropdown">
-          <button class="dropbtn" id="botaoSobre">SOBRE</button>
+          <a href="../sobre.html">
+            <button class="dropbtn">SOBRE</button>
+          </a>
         </section>
 
         <section class="dropdown">
@@ -63,10 +68,5 @@
       </nav>
     </nav>
   </section>
-  <script>
-    document.getElementById('botaoSobre').addEventListener('click', function() {
-        window.location.href = './sobre.html';
-    });
-    </script>
 </body>
 </html>

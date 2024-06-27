@@ -17,39 +17,39 @@
   <main class="login-main">
     <section class="loginContainer">
       <h2>Cadastro</h2>
-      <form id="cadastroForm">
+      
 
-        <div class="role-selection">
+        <!-- <div class="role-selection">
           <label for="role">Tipo de Usuário:</label>
           <select id="role" name="role">
             <option value="" disabled selected> O que você é: </option>
             <option value="cliente">Cliente</option>
             <option value="administrador">Administrador</option>
           </select>
-        </div>
+        </div> -->
 
-        <fieldset id="adminFields" class="campo-administrador" style="display:none;">
-          <legend>Dados do Administrador</legend>
+        <!-- <p>Dados de usuário</p> --> 
+        <form id="cadastroForm">
+          <br>
           <label for="nome">Nome:</label>
-          <input class="data-input" type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-
-          <label for="id">ID:</label>
-          <input class="data-input" type="text" id="id" name="id" required placeholder="Digite seu ID">
-
-          <label for="telefone">Telefone:</label>
-          <input class="data-input" type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+          <input id="nome" class="data-input" type="text" placeholder="Digite seu Nome" required>
 
           <label for="email">Email:</label>
-          <input class="data-input" class="admin-emailInput" type="email" id="email" name="email" required
-            placeholder="Digite seu email">
+          <input id="email" class="data-input" type="email" placeholder="Digite seu Email" required>
 
           <label for="senha">Senha:</label>
-          <input class="data-input" class="admin-passInput" type="password" id="senha" name="senha" required
-            placeholder="Digite sua senha">
+          <input id="senha" class="data-input" type="password" placeholder="Digite sua Senha" required>
 
-        </fieldset>
+          <label for="telefone">Telefone:</label>
+          <input id="telefone" class="data-input" type="tel" placeholder="Digite seu Telefone" required>
+          
+          <label for="endereco">Endereço:</label>
+          <input id="endereco" class="data-input" type="text" placeholder="Digite seu Endereço" required>
 
-        <fieldset id="clientFields" class="campo-cliente" style="display:none;">
+          <button type="submit" class="loginButton">Cadastrar</button>
+        </form>
+
+        <!-- <fieldset id="clientFields" class="campo-cliente" style="display:none;">
           <legend>Dados do Cliente</legend>
           <label for="nome">Nome:</label>
           <input class="data-input" type="text" id="nome" name="nome" required placeholder="Digite seu nome">
@@ -61,19 +61,15 @@
           <input class="data-input" type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
 
           <label for="client-email">Email:</label>
-          <input class="data-input" class="emailInput" type="email" id="client-email" name="client-email" required
-            placeholder="Digite seu email">
+          <input class="data-input" type="email" id="client-email" name="client-email" required placeholder="Digite seu email">
 
           <label for="endereco">Endereço:</label>
-          <input class="data-input" class="text" type="text" id="endereco" name="endereco" required
-            placeholder="Digite seu endereço">
+          <input class="data-input" type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
 
           <label for="client-pass">Senha:</label>
-          <input class="data-input" type="password" id="client-pass" name="client-pass" required
-            placeholder="Digite sua senha">
-        </fieldset>
-        <button type="submit" class="loginButton">Cadastrar</button>
-      </form>
+          <input class="data-input" type="password" id="client-pass" name="client-pass" required placeholder="Digite sua senha">
+        </fieldset> -->
+
     </section>
     <footer id="footer"></footer>
   </main>

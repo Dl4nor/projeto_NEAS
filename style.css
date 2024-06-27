@@ -353,6 +353,10 @@ button:hover {
   flex-direction: row;
 }
 
+.games-destaque--vendas a {
+  cursor: default;
+}
+
 .fundo-vendas {
   display: flex;
   margin: 20px 30px;
