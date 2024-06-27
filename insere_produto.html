@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="./src/head_foot.js"></script>
-    <script src="./Scripts/insere_produto.js"></script>
-    <title> Vendendo Jogos </title>
-  </head>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="./src/head_foot.js"></script>
+  <script src="./Scripts/insere_produto.js"></script>
+  <title> Vendendo Jogos </title>
+</head>
 
-  <body>
-    <header id="header"></header>
-    <main>
+<body>
+  <header id="header"></header>
+  <main>
+    <form id="jogoCriado">
       <section class="fundo-vendas">
         <aside class="loginContainer">
           <h2> Venda seu jogo </h2>
-          <form>
+          <div class="form-esquerda">
             <label>Imagem de capa:</label>
             <label for="mainImgJogo" class="input-image" tabindex="0">
               <span class="main-image"></span>
@@ -30,35 +31,59 @@
             </label>
             <label for="preco">
               Preço de compra:
-              <input class="data-input" type="number" id="precoJogo" placeholder="Digite o valor do jogo">
-            </label>   
+              <input class="data-input" type="number" min="0" id="preco" placeholder="Digite o valor do jogo">
+            </label>
             <label for="descricaoJogo">
               Descrição do jogo:
               <textarea type="text" id="descricaoJogo" placeholder="Dê uma breve descrição sobre seu jogo"></textarea>
             </label>
-          </form>
+          </div>
         </aside>
         <section class="games-destaque games-destaque--vendas">
-            <p> EXEMPLO EM LOJA: </p>
-            <nav>
-                <a href="#">
-                <img src="./src/games/img/default.webp" type="main" id="main">
-                
-                <section>
-                    <p type="title" id="nmJogo"></p> <br>
-                    <img src="./src/games/img/default.webp" type="examples">
-                    <img src="./src/games/img/default.webp" type="examples"> <br>
-                    <img src="./src/games/img/default.webp" type="examples">
-                    <img src="./src/games/img/default.webp" type="examples"> <br>
-                    <p> Já disponível</p>
-                    <p type="popular"> Popular </p>
-                    <p type="preco" id="precoJogo"></p>
-                </section>
-                </a>
-            </nav>
+          <p> EXEMPLO EM LOJA: </p>
+          <nav id="jogoParaVenda">
+            <a href="#">
+              <img src="./src/games/img/default.webp" type="main" id="main">
+
+              <section>
+                <p type="title" id="nmJogo"></p> <br>
+                <img id="print1" src="./src/games/img/default.webp" type="examples">
+                <img id="print2" src="./src/games/img/default.webp" type="examples"> <br>
+                <img id="print3" src="./src/games/img/default.webp" type="examples">
+                <img id="print4" src="./src/games/img/default.webp" type="examples"> <br>
+                <p> Já disponível</p>
+                <p type="popular"> Popular </p>
+                <p type="preco" id="precoJogo"></p>
+              </section>
+            </a>
+          </nav>
+          <div class="form-baixo">
+            <label>Prints do Jogo:</label>
+            <div class="prints">
+              <label for="printJogo1" class="input-image" tabindex="0">
+                <span class="print-image1"></span>
+                <input type="file" id="printJogo1">
+              </label>
+              <label for="printJogo2" class="input-image" tabindex="0">
+                <span class="print-image2"></span>
+                <input type="file" id="printJogo2">
+              </label>
+              <label for="printJogo3" class="input-image" tabindex="0">
+                <span class="print-image3"></span>
+                <input type="file" id="printJogo3">
+              </label>
+              <label for="printJogo4" class="input-image" tabindex="0">
+                <span class="print-image4"></span>
+                <input type="file" id="printJogo4">
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="loginButton">Partir pra venda</button>
         </section>
       </section>
-    </main>
-    <footer id="footer"></footer>
-  </body>
+    </form>
+  </main>
+  <footer id="footer"></footer>
+</body>
+
 </html>

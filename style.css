@@ -325,7 +325,7 @@ button:hover {
 /* Criando jogos para venda */
 
 .games-destaque--vendas {
-  margin: 10% 0 0 0%;
+  margin: 2% 0 0 0%;
   min-width: max-content;
   transform: scale(0.9);
 }
@@ -338,9 +338,20 @@ button:hover {
   font-size: normal;
 }
 
-/* .games-destaque--vendas section p[type="title"] {
-  width: 200px;
-} */
+.games-destaque--vendas .form-baixo {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: #0c091a;
+  color: white;
+  box-shadow: 0 0 10px #00ff0846;
+}
+
+.games-destaque--vendas .form-baixo .prints {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+}
 
 .fundo-vendas {
   display: flex;
@@ -367,6 +378,10 @@ button:hover {
 
 .fundo-vendas input[type="file"] {
   display: none;
+}
+
+.fundo-vendas .loginContainer .form-esquerda {
+  padding: 0 3px;
 }
 
 .fundo-vendas .input-image {
@@ -396,6 +411,11 @@ button:hover {
   border-color: black;
   background-color:#2b215689;
   box-shadow: 0 0 2px #09bc00;
+}
+
+.games-destaque--vendas .form-baixo .input-image {
+  transform: scale(0.6);
+  margin: -30px -50px;
 }
 
 .input-image .main-img{
