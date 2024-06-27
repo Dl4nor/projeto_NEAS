@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const senhaInput = document.getElementById('senha');
     const loginForm = document.getElementById("loginForm");
     let users = JSON.parse(localStorage.getItem("users"));
+    var registeredUsers = [];
     
     // const btn = document.getElementById("loginBtn");         // <-- uso somente para testes
 
@@ -14,6 +15,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // btn.addEventListener('click', function(x) {              // <-- uso somente para testes
 
+    // Registrando o usuário Admin
+    let nome = "admin";
+    let email = "admin";
+    let senha = "admin";
+    let telefone = "admin";
+    let endereco = "admin";
+    let isAdmin = true;
+    let logado = false;
+
+    let userInfo = {
+        'nome': nome,
+        'email': email,
+        'senha': senha,
+        'telefone': telefone,
+        'endereco': endereco,
+        'isAdmin': isAdmin,
+        'logado': logado
+    };
+
+    registeredUsers.push(userInfo);
+
+    console.log(userInfo);
+
+    var JSONregistered = JSON.stringify(registeredUsers)
+
+    localStorage.setItem("users", JSONregistered);
+
+    console.log(JSONregistered);
+    
     // Event listener para o formulário de login
     loginForm.addEventListener('submit', function(x) {
         x.preventDefault;
@@ -43,12 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Resto do código
             }
         }
-
-        users.map((x) => {
+        users.forEach((x) => {
             if(x.email == email && x.senha == senha){
                 x.logado = true;
+                localStorage.setItem("users", JSON.stringify(users));
+                window.location.href = "/NEAS.html";
                 alert("Bem vindo de volta ao jogo " + x.nome + "!");
-                window.location.href = "./NEAS.html";
+                window.location.href = "/NEAS.html";
+        
             }
             else if (x.email == email) {
                 alert("Senha incorreta!");
