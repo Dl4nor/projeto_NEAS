@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./src/images/Icone NEAS.png">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="./src/head_foot.js"></script>
+    <script src="./Scripts/sobre.js"></script>
+    <title>Bem-vindo(a) ao NEAS</title>
+</head>
+
+<body>
+    <header id="header">Header aqui</header>
+
+    <main>
+        <!-- Container principal -->
+        <section class="container">
+            <!-- Seção esquerda -->
+            <div class="left-section">
+                <img src="./src/images/logo_gradient_neas.png" alt="Logo NEAS" style="width: 250px;">
+                <p class="justified-text">Imagine um pequeno grupo decidido a dar seu próprio toque na vastidão do universo dos videogames,<br>
+                    inspirando-se na Steam, mas com uma abordagem única.<br>
+                    Eles pegaram a Steam, olharam bem para ela, aprenderam com sua estrutura e funcionalidades,<br> e
+                    então disseram: 'Vamos fazer algo diferente, algo nosso.'<br>
+                    Assim nasceu o NEAS (Não é a Steam), uma plataforma que, embora inspirada pela gigante,<br> trilha
+                    seu próprio caminho, oferecendo uma experiência distinta <br> e personalizada para os amantes de jogos.
+                    </p>
+                    
+                <button class="install-button">Instalar o NEAS</button>
+            </div>
+
+            <!-- Seção direita -->
+            <div class="right-section">
+                <section class="video-container">
+                    <video muted autoplay loop name="media" width="100%">
+                        <source src="/src/images/hollow_knight_trailer.mp4" type="video/mp4">
+                    </video>
+                </section>
+            </div>
+        </section>
+    </main>
+    <!-- Botão "mais" -->
+    <div class="scroll-down">
+        <button onclick="scrollDown()">Mais</button>
+    </div>
+
+    <section class="game-section">
+        <h2>Imerja na Cultura</h2>
+        <p>De indie a AAA, temos um catalago vasto à sua espera, incluindo lançamentos exclusivos e atualizações frequentes. Descubra novos mundos, aproveite promoções exclusivas e muito mais.</p>
+        <div class="game-grid">
+            <!-- Exemplo de item da grid -->
+            <div class="game-card">
+                <img src="/src/images/hollow_knight.jpeg" alt="Hollow Knight" class="game-image">
+                <h3>Hollow Knight</h3>
+                <p>Metroidvania.</p>
+            </div>
+            <!-- Repita a linha acima conforme necessário para cada jogo -->
+        </div>
+    </section>
+    <footer id="footer"> </footer>
+</body>
+
+</html>

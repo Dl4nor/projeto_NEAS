@@ -17,8 +17,6 @@
         <a href="./login.html" class="label-button">Iniciar Sessão</a>
         |
         <a href="#" class="label-button">Idioma</a>
-        |
-        <a href="#" class="label-button">Admin</a>
       </p>
     </section>
     <nav class="pages-nav">
@@ -29,6 +27,16 @@
       </section>
 
       <nav class="nav-buttons">
+        <section class="dropdown">
+          <a href="../NEAS.html">
+            <button class="dropbtn">ADMIN</button>
+          </a>
+          <article class="dropdown-content">
+            <a href="../insere_produto.html">Adicionar jogo </a>
+            <a href="../cadastro.html">Criar novos usuários</a>
+          </article>
+        </section>
+
         <section class="dropdown">
           <a href="./NEAS.html"><button class="dropbtn">LOJA</button></a>
           <article class="dropdown-content">
@@ -46,7 +54,7 @@
         </section>
 
         <section class="dropdown">
-          <button class="dropbtn">SOBRE</button>
+          <button class="dropbtn" id="botaoSobre">SOBRE</button>
         </section>
 
         <section class="dropdown">
@@ -55,5 +63,10 @@
       </nav>
     </nav>
   </section>
+  <script>
+    document.getElementById('botaoSobre').addEventListener('click', function() {
+        window.location.href = './sobre.html';
+    });
+    </script>
 </body>
 </html>
