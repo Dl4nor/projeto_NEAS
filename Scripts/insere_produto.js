@@ -202,3 +202,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+const genero = "Gênero Exemplo";
+const desenvolvedor = "Desenvolvedor Exemplo";
+const lancamento = "Data de Lançamento Exemplo";
+const sinopse = "Sinopse Exemplo";
+
+// Adicionando event listener ao cartão do jogo
+document.querySelector("#jogoParaVenda").addEventListener("click", function() {
+  // Alterando o estilo para mostrar a descrição
+  const descricao = document.querySelector(".descrição");
+  descricao.style.display = "block"; // Ou qualquer outro estilo que você deseja aplicar
+
+  // Preenchendo os detalhes da descrição
+  descricao.querySelector("p:nth-child(1)").textContent = genero;
+  descricao.querySelector("p:nth-child(2)").textContent = desenvolvedor;
+  descricao.querySelector("p:nth-child(3)").textContent = lancamento;
+  descricao.querySelector("p:nth-child(4)").textContent = sinopse;
+});
+

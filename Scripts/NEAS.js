@@ -2,15 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // const nomeJogo = localStorage.getItem('lsNomeJogo')
     // const divJogo = localStorage.getItem('lsDiv');
 
-
+    var registeredUsers = [];
     var users = JSON.parse(localStorage.getItem("users"));
     const header = document.getElementById("header");
     let singOut = document.getElementById("login");
-    var registeredUsers = [];
     
+    console.log('SINGOUT:', singOut)
+    singOut.addEventListener("click", (x) => {
+        users.map((x) => {
+            if(x.logado == true) 
+                singOut.innerHTML = ' ';
+                x.logado = false;
+        })
+    });
+
+
+    
+
+    // console.log(divJogo);
+    // console.log(nomeJogo);
+
+    // if (divJogo) {
+    //     document.getElementById('destaques').outerHTML += divJogo;
+    //     console.log()
+    // }
+
     users.map((x) => {
-        if(x.email != 'admin'){
-            // Registrando o usuário Admin
+        if(x.nome != 'admin' && x.senha != 'admin'){
             let nome = "admin";
             let email = "admin";
             let senha = "admin";
@@ -18,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let endereco = "admin";
             let isAdmin = true;
             let logado = false;
-        
+
             let userInfo = {
                 'nome': nome,
                 'email': email,
@@ -28,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 'isAdmin': isAdmin,
                 'logado': logado
             };
-        
+
             registeredUsers.push(userInfo);
-        
+
             console.log(userInfo);
         
             var JSONregistered = JSON.stringify(registeredUsers)
@@ -39,11 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
             console.log(JSONregistered);
         }
-        else {
-            console.log("admin já existe");
-            console.log(x.nome + ' ' + x.logado);
-        }
 
     });
+    
+    
 
 });
