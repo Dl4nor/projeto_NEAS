@@ -77,10 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if(x.email == email && x.senha == senha){
                 x.logado = true;
                 localStorage.setItem("users", JSON.stringify(users));
-                window.location.href = "/NEAS.html";
                 alert("Bem vindo de volta ao jogo " + x.nome + "!");
-                window.location.href = "/NEAS.html";
-        
             }
             else if (x.email == email) {
                 alert("Senha incorreta!");
@@ -89,5 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert("Email e senhas incorretos, verifique novamente ou crie uma nova conta!");
             }
         });
+        users.map((x) => {
+            if(x.logado == true){
+                window.location.href = "/NEAS.html";
+            }
+        })
     });
 });
