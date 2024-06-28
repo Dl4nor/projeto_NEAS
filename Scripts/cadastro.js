@@ -59,15 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     registeredUsers.push(userInfo);
                     console.log(userInfo);
 
-                    var JSONregistered = JSON.stringify(registeredUsers)
+                    var JSONregistered = JSON.stringify(registeredUsers);
 
                     localStorage.setItem("users", JSONregistered);
-                    window.location.href = "./NEAS.html";
+                    return;
                 }
                 else {
                     alert("Email já cadastrado, esta conta já existe!");
                 }
             });
         }
+        users.map((x) => {
+            if (x.logado = true){
+                window.location.href = "./NEAS.html";
+            }
+        })
     });
 });
