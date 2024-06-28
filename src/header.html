@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="../Scripts/NEAS.js"></script>
+  <script src="/Scripts/translate.js"></script>
 </head>
 
 <body>
-  <section id="headerToLoad" class="main-header">
+  <section class="main-header">
     <section class="source-functions" align="right">
       <p>
         <!-- <a href="./src/Neas.exe/trojan/neas.exe" download> -->
         <button class="install-button" type="button">Instalar o NEAS</button>
         <!-- </a> -->
-        <a id="login" href="./login.html" class="label-button" type="button">Iniciar Sessão</a>
+        <a id="login" href="./login.html" class="label-button">Iniciar Sessão</a>
         |
-        <a href="#" class="label-button">Idioma</a>
-      </p>
-    </section>
+        <div id="google_translate_element"></div>
+      </section>
     <nav class="pages-nav">
       <section>
         <a href="./NEAS.html">
@@ -47,26 +47,14 @@
             <a href="#">Lista de Desejos</a>
           </article>
         </section>
-
-        <section class="dropdown">
-          <button class="dropbtn">COMUNIDADE</button>
-          <article class="dropdown-content">
-            <a href="#">Página de Inicio </a>
-            <a href="#">Discussões</a>
-          </article>
-        </section>
-
         <section class="dropdown">
           <a href="../sobre.html">
             <button class="dropbtn">SOBRE</button>
           </a>
         </section>
-
-        <section class="dropdown">
-          <button class="dropbtn">SUPORTE</button>
-        </section>
       </nav>
     </nav>
   </section>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
