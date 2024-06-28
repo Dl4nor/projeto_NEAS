@@ -512,6 +512,12 @@ body::-webkit-scrollbar-thumb {
         padding: 40px 0;
     }
     
+    .game-section h2 {
+      border-radius: 5px;
+      font-weight: bold;
+      color: #000000;
+  }
+
     .game-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -547,7 +553,7 @@ body::-webkit-scrollbar-thumb {
     .game-card h3 {
         font-size: 18px;
         margin: 10px 0;
-        color: #333;
+        color: #000000;
     }
 
     .game-card p {
@@ -566,5 +572,87 @@ body::-webkit-scrollbar-thumb {
         margin: 10px;
     }
 
+    .devs-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px; /* Espaçamento entre os cards */
+      padding: 0 150px; /* Espaçamento da margem do site */
+      margin: 50px 0; /* Espaçamento vertical para centralizar melhor */
+  }
+  
+  .dev-info {
+      width: 400px; /* Tamanho fixo para os cards */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 2px solid #000000;
+      border-radius: 10px;
+      box-shadow: 0 0 3px #0dff00;
+      padding: 15px;
+      text-align: left;
+      transition: transform 0.3s ease;
+  }
+  
+  .description {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .dev-info.active .description {
+      display: block;
+      opacity: 1;
+  }
+  
+  .dev-info img {
+      width: 100%;
+      height: 400px; /* Altura fixa para as imagens */
+      object-fit: cover; /* Manter a proporção das imagens */
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+  
+  .dev-info span {
+      display: block;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 10px; /* Ajustar o espaço acima do nome */
+  }
+  
+  .dev-info p {
+      font-size: 14px;
+      color: #333;
+      margin-top: 10px;
+  }
+  
+  .dev-info:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease-in-out;
+  }
+   /* /Fim do estilo da tela Sobre/ */
 
- /*Fim do estilo da tela Sobre*/
+   /* /Tradução/ */
+
+   .widget_google_translate_widget {
+    background-color: #ffffff; /* Cor de fundo */
+    padding: 2em;
+  }
+  
+  #secondary.widget_google_translate_widget.widget-title {
+    color: green; /* Cor do título */
+  }
+
+  .goog-te-gadget.goog-te-gadget-simple {
+    background-color: #bb00bb; /* Cor de fundo */
+    border: medium none #bb00bb; /* Border */
+  }
+  
+  .goog-te-gadget.goog-te-gadget-simple a {
+    color: #ffffff; /* Cor do texto */
+  }
+  
+
+  /* Fim da tradução */

@@ -1,12 +1,23 @@
-// Função para rolar a página para baixo
-function scrollDown() {
-    window.scrollTo({
-        top: window.innerHeight + window.scrollY,
-        behavior: "smooth"
-    });
+// Função para alternar a descrição da carta
+function toggleCardDescription(cardElement) {
+    const description = cardElement.find('.description');
+    const image = cardElement.find('img');
+
+    if (cardElement.hasClass('active')) {
+        description.css('display', 'none');
+        image.css('display', 'block');
+    } else {
+        description.css('display', 'block');
+        image.css('display', 'none');
+    }
+
+    cardElement.toggleClass('active');
 }
 
-// Event listener para o botão "Mais"
-document.querySelector('.scroll-down button').addEventListener('click', function() {
-    document.querySelector('.game-section').scrollIntoView({ behavior: 'smooth' });
+// Evento de clique na imagem ou no card
+$(document).ready(function() {
+    $('.dev-info').on('click', function(event) {
+        event.stopPropagation(); // Impede que o evento se propague para elementos pai
+        toggleCardDescription($(this)); // Chama a função passando o elemento clicado
+    });
 });
