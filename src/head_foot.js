@@ -1,21 +1,22 @@
 $(function () {
     $("#header").load("./src/header.html", (x) => {
 
-        console.log("aaa")
-        const users = JSON.parse(localStorage.getItem("users"));
-        const userName = document.getElementById('login');
-
+        var userName = document.getElementById('login');
+        var users = JSON.parse(localStorage.getItem("users"));
         console.log(users)
+        let userFound = false;
 
         users.map((x) => {                
             if(x.logado){
                 userName.innerHTML = x.nome;
-                console.log(x.nome)
+                userFound = true;
+                return
             }
-            else {
-                userName.innerHTML = "Iniciar Sessão"
-            };
         });
+
+        if (!userFound) {
+            userName.innerHTML = "Iniciar Sessão";
+        }
 
         userName.addEventListener("click", (x) => {
             users.map((x) => {

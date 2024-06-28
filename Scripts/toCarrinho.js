@@ -1,10 +1,12 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
 
-    let produtos = [];
+    let jogo = [];
 
-    let jogoCriado = document.getElementById("jogoCriado");
-
-    let JSONJogo = JSON.parse()
+    const nomeJogo = [] 
+    for (i=0;i<8;i++){
+        nomeJogo[i] = document.getElementById("nomeJogo" + i);
+    }
+    
 
     jogoCriado.addEventListener('submit', (x) => {
         x.preventDefault();

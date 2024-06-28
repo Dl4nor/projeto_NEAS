@@ -14,23 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
     register.addEventListener("submit", (x) => {
         x.preventDefault();
 
-        let nome = document.getElementById("nome");
-        let email = document.getElementById("email");
-        let senha = document.getElementById("senha");
-        let telefone = document.getElementById("telefone");
-        let endereco = document.getElementById("endereco");
+        const nome = document.getElementById("nome");
+        const email = document.getElementById("email");
+        const senha = document.getElementById("senha");
+        const telefone = document.getElementById("telefone");
+        const endereco = document.getElementById("endereco");
         let isAdmin = false;
         let logado = true;
- 
-        let userInfo = {
-            'nome': nome.value,
-            'email': email.value,
-            'senha': senha.value,
-            'telefone': telefone.value,
-            'endereco': endereco.value,
-            'isAdmin': isAdmin,
-            'logado': logado
-        };
+        let emailExiste = false;
 
         if (!email.value.includes('@')) {
             alert('O email deve incluir @.');
@@ -53,21 +44,41 @@ document.addEventListener('DOMContentLoaded', function() {
             invalid = true;
         }
 
-        if (validarSenha(senha.value) && dominiosValidos.includes(dominioEmail)){
-            users.map((x) => {
-                if(x.email != email.value){
-                    registeredUsers.push(userInfo);
-                    console.log(userInfo);
+        users.map((x) => {
+            if(x.email == email.value){
+                emailExiste = true;
+            }
+        });
 
-                    var JSONregistered = JSON.stringify(registeredUsers)
+        if (emailExiste){
+            alert("Email já cadastrado, esta conta já existe!");
+            invalid = true;
+        }
 
-                    localStorage.setItem("users", JSONregistered);
-                    window.location.href = "./NEAS.html";
-                }
-                else {
-                    alert("Email já cadastrado, esta conta já existe!");
-                }
-            });
+        if (validarSenha(senha.value) && dominiosValidos.includes(dominioEmail) && invalid == false){
+
+            let userInfo = {
+                'nome': nome.value,
+                'email': email.value,
+                'senha': senha.value,
+                'telefone': telefone.value,
+                'endereco': endereco.value,
+                'isAdmin': isAdmin,
+                'logado': logado
+            };
+
+            registeredUsers = users;
+            registeredUsers.push(userInfo);
+            console.log(userInfo);
+
+            alert("TESTE")
+
+            localStorage.setItem("users", JSON.stringify(registeredUsers));
+
+            console.log(JSON.parse(localStorage.getItem("users")));
+
+            alert("Seja muito bem vindo, " + nome.value + "!")
+            window.location.href = "./NEAS.html";
         }
     });
 });
